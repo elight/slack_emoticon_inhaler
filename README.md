@@ -9,3 +9,4 @@ Downloader needed something more. Eventually got Chrome Extension EventPage work
 1. `git clone` the repo like normal
 2. "load unpacked extension" into chrome. The `unpacked extension` is the folder that contains this entire repo - see [google's docs](https://developer.chrome.com/extensions/getstarted#unpacked]) for details.
 3. Ta-da! Currently it'll run on any slack emoji edit page automatically every time. (PR a `browseraction` toggle for us if you want? ;D)
+4. Make sure to disable this extension after usage! It will run every time you upload an emoticon too! (did we mention that it needs a UI badly?)
