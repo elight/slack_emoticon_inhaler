@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+
+    "name": "Slack Emoticon Inhaler",
+    "description": "Downlaods all of the emoticons on a page",
+    "version": "1.0",
+
+    "content_scripts": [
+	{
+	    "matches": ["https://*.slack.com/customize/emoji"],
+	    "js":      ["jquery.js", "inhaler.js"]
+	}
+    ]
+}
