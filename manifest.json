@@ -7,7 +7,7 @@
 
     "content_scripts": [
 	{
-	    "matches": ["https://*.slack.com/customize/emoji"],
+	    "matches": ["https://*.slack.com/customize/emoji", "https://*.slack.com/admin/emoji"],
 	    "js":      ["jquery.js", "inhaler.js"]
 	}
     ],
