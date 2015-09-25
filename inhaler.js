@@ -11,13 +11,12 @@ function emoticonNameFromRow(row){
 }
 
 function downloadURI(uri, name) {
-    var link = document.createElement("a");
-    link.download = name;
-    link.href = 'data:,' + uri;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    return link;
+    msg = {
+	url: uri,
+	filename: name
+    };
+    chrome.runtime.sendMessage(msg);
+    return null;
 }
 
 $('.emoji_row').each(function(index, el) {
