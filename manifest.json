@@ -1,22 +1,27 @@
 {
-    "manifest_version": 2,
+  "manifest_version": 2,
 
-    "name": "Slack Emoticon Inhaler",
-    "description": "Downlaods all of the emoticons on a page",
-    "version": "1.0",
+  "name": "Slack Emoticon Inhaler",
+  "description": "Downlaods all of the emoticons on a page",
+  "version": "1.1",
 
-    "content_scripts": [
-	{
-	    "matches": ["https://*.slack.com/customize/emoji"],
-	    "js":      ["jquery.js", "inhaler.js"]
-	}
-    ],
-    "background": {
-	"scripts": ["eventPage.js"],
-	"persistent": false
-    },
-    "permissions": [
-	"downloads"
-    ]
+  "content_scripts": [
+    {
+      "matches": ["https://*.slack.com/customize/emoji", "https://*.slack.com/admin/emoji"],
+      "js":      ["jquery.js", "inhaler.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "bubbles.png",
+    "default_title": "Download Emoji"
+  },
+  "permissions": [
+    "downloads",
+    "tabs"
+  ]
 
 }
