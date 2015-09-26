@@ -27,3 +27,9 @@ function initiateDownload() {
     downloadURI(url, emoticon_name + "." + file_type);
   });
 }
+
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+  if (request.please_download_things === true) {
+    initiateDownload();
+  }
+});
