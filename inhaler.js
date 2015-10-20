@@ -20,12 +20,20 @@ function initiateDownload() {
     return null;
   }
 
-  $('.emoji_row').each(function(index, el) {
-    var emoticon_name = emoticonNameFromRow(el);
-    var url           = emoticonUrlFromRow(el);
-    var file_type     = url.split(".").pop();
-    downloadURI(url, emoticon_name + "." + file_type);
-  });
+  function downloadEachOne() {
+    $('.emoji_row').each(function(index, el) {
+      var emoticon_name = emoticonNameFromRow(el);
+      var url           = emoticonUrlFromRow(el);
+      var file_type     = url.split(".").pop();
+      downloadURI(url, emoticon_name + "." + file_type);
+    });
+  }
+
+  var emoticonCount = 10;
+  var confirmText = "About to download " + emoticonCount + " emoticons, this may take a while.\nA download dialog window will be opened for each one.";
+  if(confirm(confirmText)) {
+    downloadEachOne();
+  }
 }
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
