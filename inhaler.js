@@ -29,7 +29,7 @@ function initiateDownload() {
     });
   }
 
-  var emoticonCount = 10;
+  var emoticonCount = $('.emoji_row').length;
   var confirmText = "About to download " + emoticonCount + " emoticons, this may take a while.\nA download dialog window will be opened for each one.";
   if(confirm(confirmText)) {
     downloadEachOne();
