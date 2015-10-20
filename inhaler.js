@@ -30,7 +30,7 @@ function initiateDownload() {
   }
 
   var emoticonCount = $('.emoji_row').length;
-  var confirmText = "About to download " + emoticonCount + " emoticons, this may take a while.\nA download dialog window will be opened for each one.";
+  var confirmText = "About to download " + emoticonCount + " emoticons, this may take a while.\nDepending on your Chrome configuration, you may get a download dialog window for each one.";
   if(confirm(confirmText)) {
     downloadEachOne();
   }
