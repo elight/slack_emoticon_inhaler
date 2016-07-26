@@ -1,12 +1,10 @@
-Props to [caseywatts](http://github.com/caseywatts) for most of inhaler.js.
+Your favorite emoji are in one Slack but not another? Download them all and re-uploading them all could take a whiiiile.
 
-Downloader needed something more. Eventually got Chrome Extension EventPage working. chrome.downloads.download() fails silently when it doesn't like its args. And people wonder why I don't like JS.
+This chrome extension automates the downloading half of it :)
 
-![facepalm](https://dl.dropboxusercontent.com/u/379705/images/single-facepalm.gif)
 
 ## How to Use
 
 1. `git clone` the repo like normal
-2. "load unpacked extension" into chrome. The `unpacked extension` is the folder that contains this entire repo - see [google's docs](https://developer.chrome.com/extensions/getstarted#unpacked]) for details.
-3. Ta-da! Currently it'll run on any slack emoji edit page automatically every time. (PR a `browseraction` toggle for us if you want? ;D)
-4. Make sure to disable this extension after usage! It will run every time you upload an emoticon too! (did we mention that it needs a UI badly?)
+2. In `chrome://extensions` do `load unpacked extension` into chrome. The `unpacked extension` is the folder that contains this entire repo - see [google's docs](https://developer.chrome.com/extensions/getstarted#unpacked]) for details.
+3. Ta-da! Go to a slack emoji edit page, and then press the extension's icon (bubbles!). All of the emoji on that page will be downloaded, and it could take a while.
